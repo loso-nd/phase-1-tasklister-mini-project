@@ -22,6 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
   //assign elements associated values
   list.textContent = e.target["new-task-description"].value
   deletBtn.innerHTML= "X"
+  deletBtn.style.margin = "0px 0px 0px 10px"
+  deletBtn.style.verticleAlign ="center"
   
   //Display li and btn to the DOM
   toDoList.appendChild(list);
