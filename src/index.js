@@ -17,10 +17,18 @@ document.addEventListener("DOMContentLoaded", () => {
   //create a delete btn
   let toDoList = document.querySelector('#list')
   let list = document.createElement('li');
+  let deletBtn = document.createElement('button')
+
+  //assign elements associated values
   list.textContent = e.target["new-task-description"].value
+  deletBtn.innerHTML= "X"
   
-  //Display li to the DOM
+  //Display li and btn to the DOM
   toDoList.appendChild(list);
+  list.appendChild(deletBtn);
+
+  //addEventListener to remove deletBtn when clicked
+  deletBtn.addEventListener('click', () => list.remove())
 
   }
 
